@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box{
+   width: 800px;
+   margin: 20px auto;
+}
+.delta(@size,@color,@direction){
+        border: @size solid transparent;
+        border-@{direction}: @size solid @color;
+}
+ul li:nth-child(1) div{
+    .delta(50px,red,right)
+}
+ul li:nth-child(2) div{
+    .delta(25px,blue,right)
+}
+ul li:nth-child(3) div{
+    .delta(50px,red,left)
+}
+ul li:nth-child(4) div{
+    .delta(25px,blue,left)
+}
+ul li:nth-child(5) div{
+    .delta(50px,red,top)
+}
+ul li:nth-child(6) div{
+    .delta(25px,blue,top)
+}
+ul li:nth-child(7) div{
+    .delta(50px,red,bottom)
+}
+ul li:nth-child(8) div{
+    .delta(25px,blue,bottom)
+}
+ul{
+    list-style: none;
+    li{
+        float: left;
+        width: 100px;
+        div{
+            height:0;
+            width:0;
+        }
+    }
+}
